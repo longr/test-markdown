@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Table</title>
+</head>
+<body>
+  <h1>People Table</h1>
+  <table border="1" id="peopleTable">
+    <thead>
+      <tr><th>Name</th><th>Age</th><th>City</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector("#peopleTable tbody");
+        data.forEach(person => {
+          const row = `<tr><td>${person.name}</td><td>${person.age}</td><td>${person.city}</td></tr>`;
+          tbody.innerHTML += row;
+        });
+      });
+  </script>
+</body>
+</html>
