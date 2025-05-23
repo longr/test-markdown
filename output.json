@@ -12,356 +12,407 @@
     "cardinality": "0..*",
     "type": "URI",
     "description": "A static data store in which the resource has been deposited, e.g. Zenodo, Figshare, HAL. Often a snapshot of the resource in a repository (dynamic data store) at a given point in time.\u00a0 SHOULD use the DOI.",
-    "example": "https://zenodo.org/records/4555755"
+    "example": "https://zenodo.org/records/4555755",
+    "required": "optional"
   },
   {
     "label (source)": "bibliographic citation",
     "cardinality": "1",
     "type": "text",
     "description": "A bibliographic reference for the resource.\u00a0 MUST use APA style.",
-    "example": "Magee, E.; Huxley, D.; Tso, C.-.M. (2023). Random forest model to predict long-term seasonal nitrate and orthophosphate concentrations in British river reaches. NERC EDS Environmental Information Data Centre. https://doi.org/10.5285/ba208b6c-6f1a-43b1-867d-bc1adaff6445"
+    "example": "Magee, E.; Huxley, D.; Tso, C.-.M. (2023). Random forest model to predict long-term seasonal nitrate and orthophosphate concentrations in British river reaches. NERC EDS Environmental Information Data Centre. https://doi.org/10.5285/ba208b6c-6f1a-43b1-867d-bc1adaff6445",
+    "required": "automatic"
   },
   {
     "label (source)": "conforms to",
     "cardinality": "0..*",
     "type": "CV/URI",
     "description": "An established standard to which the described resource conforms.\u00a0 If used to specify the coordinate reference system, SHOULD use the URI of a term from the OGC CRS Registry.",
-    "example": "https://www.opengis.net/def/crs/EPSG/0/4326"
+    "example": "https://www.opengis.net/def/crs/EPSG/0/4326",
+    "required": "optional"
   },
   {
     "label (source)": "contact point",
     "cardinality": "1..*",
     "type": "URI",
     "description": "Relevant contact information for the cataloged resource.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://ror.org/00pggkr55"
+    "example": "https://ror.org/00pggkr55",
+    "required": "mandatory"
   },
   {
     "label (source)": "contributor*",
     "cardinality": "0..*",
     "type": "URI",
     "description": "An entity responsible for making contributions to the resource.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://orcid.org/0000-0002-6540-8547"
+    "example": "https://orcid.org/0000-0002-6540-8547",
+    "required": "optional"
   },
   {
     "label (source)": "creator*",
     "cardinality": "0..*",
     "type": "URI",
     "description": "The entity responsible for producing the resource.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://orcid.org/0000-0002-6540-8547"
+    "example": "https://orcid.org/0000-0002-6540-8547",
+    "required": "optional"
   },
   {
     "label (source)": "date available",
     "cardinality": "1",
     "type": "date",
     "description": "Date that the resource became or will become available.\u00a0 If embargoed, MUST use embargo end date and MUST NOT use date when metadata record was put online. MUST use the form YYYY-MM-DD.",
-    "example": "2025-05-19"
+    "example": "2025-05-19",
+    "required": "mandatory"
   },
   {
     "label (source)": "demo URL",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A web app demo, visualisation, tutorial, etc. that makes use of the resource.\u00a0\u00a0",
-    "example": "https://moisture-wqmlviewer.datalabs.ceh.ac.uk/wqml_viewer"
+    "example": "https://moisture-wqmlviewer.datalabs.ceh.ac.uk/wqml_viewer",
+    "required": "optional"
   },
   {
     "label (source)": "description",
     "cardinality": "1",
     "type": "text",
     "description": "A free-text account of the resource.\u00a0\u00a0",
-    "example": "This R application is an implementation of state tagging approach for improved quality assurance of environmental data. The application returns state-dependent prediction intervals on input data. The states are determined based on clustering of auxiliary inputs (such as meteorological data) made on the same day. The method provides contextual information to assess the quality of observational data and is applicable to any point-based, daily time series observational data."
+    "example": "This R application is an implementation of state tagging approach for improved quality assurance of environmental data. The application returns state-dependent prediction intervals on input data. The states are determined based on clustering of auxiliary inputs (such as meteorological data) made on the same day. The method provides contextual information to assess the quality of observational data and is applicable to any point-based, daily time series observational data.",
+    "required": "mandatory"
   },
   {
     "label (source)": "distribution",
     "cardinality": "0..*",
     "type": "URI",
     "description": "See dedicated tab",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "has current owner",
     "cardinality": "1",
     "type": "URI",
     "description": "Relates a resource to an agent currently having legal possession of a resource.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://ror.org/04xw4m193"
+    "example": "https://ror.org/04xw4m193",
+    "required": "mandatory"
   },
   {
     "label (source)": "has custodian",
     "cardinality": "1",
     "type": "URI",
     "description": "Relates a resource to an agent having legal custody of a resource.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://ror.org/04xw4m193"
+    "example": "https://ror.org/04xw4m193",
+    "required": "mandatory"
   },
   {
     "label (source)": "has spatial reference system",
     "cardinality": "0..*",
     "type": "CV/URI",
     "description": "Identifies an entity that has a spatial reference system in order to interpret the result.\u00a0 SHOULD use the URI of a term from the OGC CRS Registry.",
-    "example": "https://www.opengis.net/def/crs/EPSG/0/4326"
+    "example": "https://www.opengis.net/def/crs/EPSG/0/4326",
+    "required": "optional"
   },
   {
     "label (source)": "identifier",
     "cardinality": "1..*",
     "type": "URI",
     "description": "A unique identifier of the resource being described or cataloged.\u00a0\u00a0",
-    "example": "https://doi.org/10.5285/44c577d3-665f-40de-adce-74ecad7b304a"
+    "example": "https://doi.org/10.5285/44c577d3-665f-40de-adce-74ecad7b304a",
+    "required": "automatic"
   },
   {
     "label (source)": "is referenced by",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A related resource, such as a publication, that references, cites, or otherwise points to the cataloged resource.\u00a0 SHOULD use the DOI. MUST be used only once per resource that has referenced the subject resource (i.e. do not use twice for the DOI and for another PID of the same resource).",
-    "example": "https://doi.org/10.3389/frwa.2023.1244024"
+    "example": "https://doi.org/10.3389/frwa.2023.1244024",
+    "required": "optional"
   },
   {
     "label (source)": "keyword/tag",
     "cardinality": "",
     "type": "CV - TODO",
     "description": "A keyword or tag describing the resource.\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "landing page",
     "cardinality": "",
     "type": "URI",
     "description": "A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.\u00a0\u00a0",
-    "example": "https://catalogue.ceh.ac.uk/documents/ba208b6c-6f1a-43b1-867d-bc1adaff6445"
+    "example": "https://catalogue.ceh.ac.uk/documents/ba208b6c-6f1a-43b1-867d-bc1adaff6445",
+    "required": "automatic"
   },
   {
     "label (source)": "language",
     "cardinality": "1..*",
     "type": "CV",
     "description": "A language of the resource. This refers to the natural language used for textual metadata (i.e., titles, descriptions, etc.) of a cataloged resource (i.e., dataset or service) or the textual values of a dataset distribution Repeat this property if the resource is available in multiple languages. MUST use a term from the ISO 639-1 vocabulary.",
-    "example": "https://id.loc.gov/vocabulary/iso639-1.html"
+    "example": "https://id.loc.gov/vocabulary/iso639-1.html",
+    "required": "mandatory"
   },
   {
     "label (source)": "license",
     "cardinality": "1",
     "type": "CV/URI",
     "description": "A legal document under which the resource is made available.\u00a0 SHOULD use a term from the SPDX License List.",
-    "example": "https://spdx.org/licenses/OGL-UK-3.0.ttl"
+    "example": "https://spdx.org/licenses/OGL-UK-3.0.ttl",
+    "required": "mandatory"
   },
   {
     "label (source)": "previous version",
     "cardinality": "0..1",
     "type": "URI",
     "description": "The previous version of a resource in a lineage [PAV].\u00a0 SHOULD use the DOI.",
-    "example": "https://doi.org/10.5285/18b7c387-037d-4949-98bc-e8db5ef4264c"
+    "example": "https://doi.org/10.5285/18b7c387-037d-4949-98bc-e8db5ef4264c",
+    "required": "optional"
   },
   {
     "label (source)": "publisher",
     "cardinality": "",
     "type": "URI",
     "description": "The entity responsible for making the resource available.\u00a0 SHOULD use an ORCID for people and a ROR ID for organisations.",
-    "example": "https://ror.org/00pggkr55"
+    "example": "https://ror.org/00pggkr55",
+    "required": "automatic"
   },
   {
     "label (source)": "release date",
     "cardinality": "1",
     "type": "date",
     "description": "Date of formal issuance (e.g., publication) of the resource. This property SHOULD be set using the first known date of issuance. If embargoed, MUST use date when metadata record was put online and MUST NOT use embargo end date. MUST use the form YYYY-MM-DD.",
-    "example": "2025-05-19"
+    "example": "2025-05-19",
+    "required": "automatic"
   },
   {
     "label (source)": "replaces",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A related resource that is supplanted, displaced, or superseded by the described resource [DCTERMS].\u00a0 SHOULD use the DOI.",
-    "example": "https://doi.org/10.5285/18b7c387-037d-4949-98bc-e8db5ef4264c"
+    "example": "https://doi.org/10.5285/18b7c387-037d-4949-98bc-e8db5ef4264c",
+    "required": "optional"
   },
   {
     "label (source)": "repository URL",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A dynamic data store in which the resource has been deposited and can be continually updated, e.g. Github, Gitlab, Bitbucket.\u00a0\u00a0",
-    "example": "https://github.com/NERC-CEH/IDM_comparisons"
+    "example": "https://github.com/NERC-CEH/IDM_comparisons",
+    "required": "optional"
   },
   {
     "label (source)": "copyright holder",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A reference to the organisation that holds copyright over the content of the dataset. SHOULD use a ROR ID.\u00a0\u00a0",
-    "example": "https://ror.org/01kj2bm70"
+    "example": "https://ror.org/01kj2bm70",
+    "required": "optional"
   },
   {
     "label (source)": "copyright statement",
     "cardinality": "",
     "type": "URI",
     "description": "A link to a document that includes a statement about the copyright status of the content of a dataset. The web page might include both a copyright notice for a dataset, and any relevant guidance for re-users.\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "copyright notice",
     "cardinality": "0..*",
     "type": "text",
     "description": "The copyright notice associated with a rights statement. A notice must typically be preserved and displayed when acknowledging the source of some data. This property is expressed as a simple literal value and so is suitable for simple copyright notices. Where a data publisher needs to reference a larger copyright statement and/or related guidance then the copyrightStatement property should be used instead.\u00a0\u00a0",
-    "example": "\u00a9 UK Centre for Ecology & Hydrology"
+    "example": "\u00a9 UK Centre for Ecology & Hydrology",
+    "required": "optional"
   },
   {
     "label (source)": "copyright year",
     "cardinality": "0..1",
     "type": "year",
     "description": "The year from which copyright over the content of the dataset is asserted.\u00a0\u00a0",
-    "example": "2015"
+    "example": "2015",
+    "required": "optional"
   },
   {
     "label (source)": "spatial representation type",
     "cardinality": "0..*",
     "type": "CV - TODO",
     "description": "raster/vector/tabular\u00a0\u00a0",
-    "example": "raster"
+    "example": "raster",
+    "required": "optional"
   },
   {
     "label (source)": "spatial resolution",
     "cardinality": "0..1",
     "type": "number",
     "description": "Minimum spatial separation resolvable in a dataset, measured in meters. If the dataset is an image or grid this should correspond to the spacing of items. For other kinds of spatial datasets, this property will usually indicate the smallest distance between items in the dataset.\u00a0",
-    "example": "30"
+    "example": "30",
+    "required": "optional"
   },
   {
     "label (source)": "spatial/geographical coverage",
     "cardinality": "0..1",
     "type": "bounding box",
     "description": "The geographical area covered by the dataset.\u00a0 MUST use the WKT form.",
-    "example": "POLYGON((-8.648 49.864, -8.648 60.861, 1.768 60.861, 1.768 49.864, -8.648 49.864))"
+    "example": "POLYGON((-8.648 49.864, -8.648 60.861, 1.768 60.861, 1.768 49.864, -8.648 49.864))",
+    "required": "optional"
   },
   {
     "label (source)": "status",
     "cardinality": "1",
     "type": "CV - TODO",
     "description": "The status of the resource in the context of a particular workflow process [VOCAB-ADMS].\u00a0\u00a0",
-    "example": "superseded"
+    "example": "superseded",
+    "required": "automatic"
   },
   {
     "label (source)": "temporal coverage",
     "cardinality": "0..1",
     "type": "date(s)",
     "description": "The temporal period that the dataset covers.\u00a0 MUST use the form YYYY-MM-DD.",
-    "example": "start: 2010-01-01, end: 2020-12-31"
+    "example": "start: 2010-01-01, end: 2020-12-31",
+    "required": "optional"
   },
   {
     "label (source)": "temporal resolution",
     "cardinality": "0..1",
     "type": "duration",
     "description": "Minimum time period resolvable in the dataset. If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset. MUST use the form PnYnMnDTnHnMnS.",
-    "example": "PT1H"
+    "example": "PT1H",
+    "required": "optional"
   },
   {
     "label (source)": "theme/category",
     "cardinality": "1..*",
     "type": "CV - TODO",
     "description": "A main category of the resource. A resource can have multiple themes.\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "title",
     "cardinality": "1",
     "type": "text",
     "description": "A name given to the resource.\u00a0\u00a0",
-    "example": "State tagging application for environmental data quality assurance"
+    "example": "State tagging application for environmental data quality assurance",
+    "required": "mandatory"
   },
   {
     "label (source)": "topic category",
     "cardinality": "",
     "type": "CV",
     "description": "Topic category in accordance with ISO-19115 [INSPIRE-TC].\u00a0 MUST use a term from the EN ISO 19115 code list.",
-    "example": "https://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere"
+    "example": "https://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere",
+    "required": "optional"
   },
   {
     "label (source)": "type/genre",
     "cardinality": "",
     "type": "CV - TODO",
     "description": "The nature or genre of the resource.\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "update/modification date",
     "cardinality": "1",
     "type": "date",
     "description": "Most recent date on which the resource was changed, updated or modified. The value of this property indicates a change to the actual resource, not a change to the catalog record. An absent value MAY indicate that the resource has never changed after its initial publication, or that the date of last modification is not known, or that the resource is continuously updated. MUST use the form YYYY-MM-DD.",
-    "example": ""
+    "example": "",
+    "required": "automatic"
   },
   {
     "label (source)": "version",
     "cardinality": "1",
     "type": "text",
     "description": "The version indicator (name or identifier) of a resource.\u00a0 SHOULD use the SemVer or SchemaVer form.",
-    "example": "0.0.1"
+    "example": "0.0.1",
+    "required": "mandatory"
   },
   {
     "label (source)": "version notes",
     "cardinality": "0..1",
     "type": "text",
     "description": "A description of changes between this version and the previous version of the resource [VOCAB-ADMS]. In case of backward compatibility issues with the previous version of the resource, a textual description of them SHOULD be specified by using this property. MUST be used if previous version exists.",
-    "example": "This release replaces the previous version as it addresses localised issues with the source data (Met Office monthly rainfall grids) for the period 1960 to 2000."
+    "example": "This release replaces the previous version as it addresses localised issues with the source data (Met Office monthly rainfall grids) for the period 1960 to 2000.",
+    "required": "optional"
   },
   {
     "label (source)": "was derived from",
     "cardinality": "0..*",
     "type": "URI",
     "description": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.\u00a0 A resource (e.g. a model, a dataset) can be derived from another resource (e.g. a dataset, a model). SHOULD use the DOI.",
-    "example": "https://doi.org/10.5285/7115bc48-3ab0-475d-84ae-fd3126c20984"
+    "example": "https://doi.org/10.5285/7115bc48-3ab0-475d-84ae-fd3126c20984",
+    "required": "optional"
   },
   {
     "label (source)": "was generated by",
     "cardinality": "0..*",
     "type": "URI",
     "description": "An activity that generated, or provides the business context for, the creation of the dataset.\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "automatic"
   },
   {
     "label (source)": "was influenced by",
     "cardinality": "0..*",
     "type": "URI",
     "description": "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation.\u00a0 A resource (e.g. a method) can be influenced by another resource (e.g. another method). SHOULD use the DOI.",
-    "example": "https://doi.org/10.5285/7115bc48-3ab0-475d-84ae-fd3126c20984"
+    "example": "https://doi.org/10.5285/7115bc48-3ab0-475d-84ae-fd3126c20984",
+    "required": "optional"
   },
   {
     "label (source)": "workflow format",
     "cardinality": "0..1",
     "type": "CV/URI",
     "description": "\u00a0 Required only if workflow (not method)",
-    "example": "Argo"
+    "example": "Argo",
+    "required": "optional"
   },
   {
     "label (source)": "has part",
     "cardinality": "0..*",
     "type": "",
     "description": "\u00a0 A method/package used in the workflow",
-    "example": ""
+    "example": "",
+    "required": "optional"
   },
   {
     "label (source)": "input (file format/parameter type)",
     "cardinality": "0..*",
     "type": "CV",
     "description": "\u00a0\u00a0",
-    "example": "CSV"
+    "example": "CSV",
+    "required": "optional"
   },
   {
     "label (source)": "output (file format/parameter type)",
     "cardinality": "0..*",
     "type": "CV",
     "description": "\u00a0\u00a0",
-    "example": "string"
+    "example": "string",
+    "required": "optional"
   },
   {
     "label (source)": "software dependency",
     "cardinality": "0..*",
     "type": "CV/URI",
     "description": "\u00a0\u00a0",
-    "example": "Python 3.0.0"
+    "example": "Python 3.0.0",
+    "required": "optional"
   },
   {
     "label (source)": "hardware requirement",
     "cardinality": "0..*",
     "type": "CV/URI",
     "description": "\u00a0\u00a0",
-    "example": "GPU"
+    "example": "GPU",
+    "required": "optional"
   },
   {
     "label (source)": "category of method/workflow???",
     "cardinality": "??",
     "type": "CV",
     "description": "\u00a0\u00a0",
-    "example": ""
+    "example": "",
+    "required": "optional"
   }
 ]
