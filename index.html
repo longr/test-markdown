@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple Table</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Table</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>People Table</h1>
-  <table border="1" id="peopleTable">
-    <thead>
-      <tr><th>Name</th><th>Age</th><th>City</th></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+<body class="bg-gray-50 text-gray-800 p-6 font-sans">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6 text-center">People Table</h1>
+    <div class="overflow-x-auto shadow rounded-lg">
+      <table class="min-w-full bg-white border border-gray-300 text-sm text-left">
+        <thead class="bg-gray-100 text-gray-700 uppercase">
+          <tr>
+            <th class="px-4 py-3 border-b">Name</th>
+            <th class="px-4 py-3 border-b">Age</th>
+            <th class="px-4 py-3 border-b">City</th>
+          </tr>
+        </thead>
+        <tbody id="peopleTable" class="divide-y divide-gray-200">
+          <!-- Data rows will be injected here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <script>
     fetch('data.json')
       .then(response => response.json())
       .then(data => {
-        const tbody = document.querySelector("#peopleTable tbody");
+        const tbody = document.getElementById("peopleTable");
         data.forEach(person => {
-          const row = `<tr><td>${person.name}</td><td>${person.age}</td><td>${person.city}</td></tr>`;
+          const row = `
+            <tr class="hover:bg-gray-50">
+              <td class="px-4 py-2 border-b">${person.name}</td>
+              <td class="px-4 py-2 border-b">${person.age}</td>
+              <td class="px-4 py-2 border-b">${person.city}</td>
+            </tr>`;
           tbody.innerHTML += row;
         });
       });
