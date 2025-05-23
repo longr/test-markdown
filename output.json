@@ -4,7 +4,8 @@
     "cardinality": "1",
     "type": "CV/URI",
     "description": "Information about who can access the resource or an indication of its security status.\u00a0 SHOULD use a term from the Limitations on public access code list.",
-    "example": "https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
+    "example": "https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations",
+    "required": "mandatory"
   },
   {
     "label (source)": "archive URL",
