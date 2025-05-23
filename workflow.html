@@ -54,18 +54,18 @@
         data.forEach(person => {
           let rowColor = "bg-gray-50";
           switch (person.required) {
-            case "Mandatory":
+            case "mandatory":
               rowColor = "bg-red-100";
               break;
-            case "Optional":
+            case "optional":
               rowColor = "bg-orange-100";
               break;
-            case "Automatic":
+            case "automatic":
               rowColor = "bg-green-100";
               break;
         }
           const row = `
-            <tr class="${rowColor} hover:bg-gray-50">
+            <tr class="${rowColor} hover:bg-gray-80">
               <td class="px-4 py-2 border-b">${person["label (source)"]}</td>
               <td class="px-4 py-2 border-b">${person.cardinality}</td>
               <td class="px-4 py-2 border-b">${person.type}</td>
