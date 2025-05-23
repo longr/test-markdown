@@ -55,17 +55,17 @@
           let rowColor = "bg-gray-50";
           switch (person.required) {
             case "mandatory":
-              rowColor = "bg-red-100";
+              rowColor = "bg-red-100 hover:bg-red-50";
               break;
             case "optional":
-              rowColor = "bg-orange-100";
+              rowColor = "bg-orange-100 hover:bg-orange-50";
               break;
             case "automatic":
-              rowColor = "bg-green-100";
+              rowColor = "bg-green-100 hover:bg-green-50";
               break;
         }
           const row = `
-            <tr class="${rowColor} hover:bg-gray-80">
+            <tr class="${rowColor}">
               <td class="px-4 py-2 border-b">${person["label (source)"]}</td>
               <td class="px-4 py-2 border-b">${person.cardinality}</td>
               <td class="px-4 py-2 border-b">${person.type}</td>
