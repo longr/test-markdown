@@ -1,3 +1,9 @@
+---
+layout: default
+title: Nice Table
+---
+
+
 # Test table 
 
 | label (source) | cardinality | type | description | example |
